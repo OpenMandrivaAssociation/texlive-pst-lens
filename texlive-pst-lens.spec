@@ -52,6 +52,7 @@ remarkable range of effects.
 #- source
 %doc %{_texmfdistdir}/source/generic/pst-lens/pst-lens.dtx
 %doc %{_texmfdistdir}/source/generic/pst-lens/pst-lens.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -62,3 +63,5 @@ remarkable range of effects.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
