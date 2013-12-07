@@ -6,7 +6,7 @@
 # catalog-version 1.02
 Name:		texlive-pst-lens
 Version:	1.02
-Release:	5
+Release:	6
 Summary:	Lenses with PSTricks
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pstricks/contrib/pst-lens
