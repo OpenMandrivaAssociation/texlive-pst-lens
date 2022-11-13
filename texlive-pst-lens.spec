@@ -1,19 +1,13 @@
-# revision 15878
-# category Package
-# catalog-ctan /graphics/pstricks/contrib/pst-lens
-# catalog-date 2007-06-15 10:24:12 +0200
-# catalog-license lppl
-# catalog-version 1.02
 Name:		texlive-pst-lens
-Version:	1.02
-Release:	11
+Version:	15878
+Release:	1
 Summary:	Lenses with PSTricks
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pstricks/contrib/pst-lens
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-lens.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-lens.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-lens.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-lens.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-lens.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-lens.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -25,12 +19,12 @@ This PSTricks package provides a really rather simple command
 remarkable range of effects.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -45,24 +39,11 @@ remarkable range of effects.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.02-2
-+ Revision: 755321
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.02-1
-+ Revision: 719365
-- texlive-pst-lens
-- texlive-pst-lens
-- texlive-pst-lens
-- texlive-pst-lens
-
