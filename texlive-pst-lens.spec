@@ -1,6 +1,6 @@
 Name:		texlive-pst-lens
 Version:	15878
-Release:	1
+Release:	2
 Summary:	Lenses with PSTricks
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pstricks/contrib/pst-lens
