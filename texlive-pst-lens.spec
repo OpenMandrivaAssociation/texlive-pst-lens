@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	Lenses with PSTricks
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/graphics/pstricks/contrib/pst-lens
+URL:		https://www.ctan.org/tex-archive/graphics/pstricks/contrib/pst-lens
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-lens.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-lens.doc.r%{version}.tar.xz
